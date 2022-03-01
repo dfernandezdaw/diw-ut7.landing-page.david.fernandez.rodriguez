@@ -15,7 +15,11 @@ h1 {
   color: colors.$red;
   font-size: 2rem;
   padding-top: 1rem;
-  padding-left: 1rem;
+}
+
+.title{
+  @extend h1;
+  padding-left: 12rem;
 }
 
 p {
@@ -245,6 +249,25 @@ footer {
       }
     }
   }
+  .warpper{
+    flex-direction: column
+  }
+
+  .trailer{
+    max-width: 100%;
+    height: auto;
+    padding-top: 56.25%
+  }
+}
+
+// Estilos trailer juego
+
+.trailer {
+  @include mixin.flexible(flex, row, nowrap, center, center);
+  .videotrailer{
+    width: 80%;
+    height: auto;
+  }
 }
 
 // Estilos tabs y funcionamiento de las tabs usando CSS. 
@@ -327,10 +350,4 @@ footer {
     color: colors.$red;
     border-top: 3px solid #000;
   }
-}
-
-// Estilos trailer juego
-
-.trailer {
-  @include mixin.flexible(flex, row, nowrap, center, center);
 }
